@@ -3,7 +3,7 @@ from pathlib import Path
 import re
 
 ROOT = Path(__file__).resolve().parent
-REVISION = 'c92e880263131e360b2a54b54df253c59f042d8d'
+REVISION = '0dd0e4ebf806670fe65187011c4ae860f1f1fc1f'
 BASE = f'https://raw.githubusercontent.com/neka4141-ui/transformation-club-assets/{REVISION}/site-v1/assets/'
 
 
@@ -35,7 +35,7 @@ css = (ROOT / 'assets/styles.css').read_text(encoding='utf-8')
 css = re.sub(r"url\('([^']+)'\)", lambda m: "url('" + BASE + m[1] + "')", css)
 css = css.replace('Montserrat', 'TCMontserrat').replace('Caveat', 'TCCaveat')
 css = css.replace('hero-art-in', 'tc-hero-art-in').replace('hero-copy-in', 'tc-hero-copy-in')
-css = scope_css(css)
+css = scope_css(re.sub(r'/\*.*?\*/', '', css, flags=re.S))
 css += '''
 /* Full-width HTML block within GetPlatinum's centered content container. */
 #tc-embed{position:relative;left:50%;width:100vw;max-width:none!important;margin:0 0 0 -50vw!important;padding:0!important;overflow:hidden;line-height:normal;text-align:left;box-sizing:border-box;background:#090807;color:#f7f5ed}
