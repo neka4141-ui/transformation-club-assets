@@ -83,5 +83,9 @@ h1,h2{font-family:inherit}
 /* Match the reference title and upright, open-letter duration captions. */
 .tariff-stack .light .plan-card h2{font-size:min(8vw,94px);letter-spacing:-.055em;white-space:nowrap}
 .tariff-stack .light .price-row,.tariff-stack .master .price-row{justify-content:flex-start;gap:min(4vw,47px)}
-.tariff-stack .light .price-row .handwritten,.tariff-stack .master .price-row .handwritten{font-family:TCNeucha,cursive;font-size:min(4.8vw,56px);font-weight:400;font-style:normal;letter-spacing:0;line-height:1.1;-webkit-text-stroke:.35px currentColor}
-.tariff-stack .master .price-row .handwritten{text-transform:uppercase}
+.tariff-stack .light .price-row .handwritten,.tariff-stack .master .price-row .handwritten{font-size:min(5vw,58px);line-height:1.1}
+/* Caveat has a built-in lean even with font-style:normal; counter-skew the captions. */
+.tariff-stack .price-row .handwritten{font-family:Caveat,cursive;font-weight:700;font-style:normal;text-transform:none;letter-spacing:-.025em;-webkit-text-stroke:0;transform:skewX(10deg);transform-origin:center}
+.tariff-stack .personal .plan-card h2{font-size:min(5.65vw,66px);letter-spacing:-.06em;width:calc(100% + min(5vw,58px))}
+
+.tariff-stack .personal .price-row{padding-right:min(1.1vw,13px)}
