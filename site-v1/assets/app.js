@@ -1,7 +1,39 @@
 (() => {
   'use strict';
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const controls = document.querySelectorAll('.gold-button, .video-button, .tariff-link, .back-top, .dialog-ok');
+  const controls = document.querySelectorAll('.gold-button, .video-button, .tariff-link, .back-top, .dialog-ok, .floating-nav a');
+  const navigation = document.querySelector('.floating-nav');
+  if (navigation && 'IntersectionObserver' in window) {
+    const navTargets = [document.querySelector('#tc-top'), document.querySelector('.tariff-stack'), document.querySelector('#tc-video')];
+    const anchors = ['#tc-top', '#tc-tariffs', '#tc-video'];
+    const navObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const href = anchors[navTargets.indexOf(entry.target)];
+        navigation.querySelectorAll('a').forEach(link => {
+          if (link.getAttribute('href') === href) link.setAttribute('aria-current', 'location');
+          else link.removeAttribute('aria-current');
+        });
+      });
+    }, { rootMargin: '-20% 0px -65% 0px', threshold: 0 });
+    navTargets.filter(Boolean).forEach(target => navObserver.observe(target));
+  }
+  document.querySelectorAll('a[href^="#tc-"]').forEach(link => {
+    link.addEventListener('click', event => {
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || event.button !== 0) return;
+      const target = document.querySelector(link.getAttribute('href'));
+      if (!target) return;
+      event.preventDefault();
+      const offset = navigation ? navigation.getBoundingClientRect().height + 12 : 20;
+      window.scrollTo({ top: Math.max(0, target.getBoundingClientRect().top + window.scrollY - offset), behavior: motion.matches ? 'instant' : 'smooth' });
+      target.setAttribute('tabindex', '-1');
+      target.focus({ preventScroll: true });
+      if (navigation) navigation.querySelectorAll('a').forEach(item => {
+        if (item.getAttribute('href') === link.getAttribute('href')) item.setAttribute('aria-current', 'location');
+        else item.removeAttribute('aria-current');
+      });
+    });
+  });
   let activePress = null;
   const releasePress = (cancelled = false) => {
     if (!activePress) return;

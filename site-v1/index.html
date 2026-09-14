@@ -13,12 +13,19 @@
   <script src="assets/app.js" defer></script>
 </head>
 <body>
+  <nav class="floating-nav" aria-label="Навигация по странице">
+    <div class="floating-nav-inner">
+      <a href="#tc-top" aria-current="location">Главная</a>
+      <a href="#tc-tariffs">Тарифы</a>
+      <a class="nav-club" href="#tc-video">Смотреть про клуб</a>
+    </div>
+  </nav>
   <a class="skip-link" href="#tc-tariffs">Перейти к тарифам</a>
   <main>
     <section class="hero section" id="tc-top" aria-labelledby="hero-title">
       <div class="hero-art" aria-hidden="true"></div>
       <div class="hero-heading">
-        <h1 id="hero-title">СИСТЕМА 3-Х ШАГОВ</h1>
+        <h1 id="hero-title">СИСТЕМА <span class="hero-nowrap">3-Х ШАГОВ</span></h1>
         <p class="handwritten">и клуб трансформаций</p>
       </div>
       <a class="tariff-link" href="#tc-tariffs">Тарифы <span aria-hidden="true">↓</span></a>
@@ -26,7 +33,7 @@
 
     <section class="access section" id="tc-access" aria-labelledby="access-title">
       <div class="access-inner">
-        <h2 id="access-title" class="reveal">Сразу после оплаты<br>бот в tg автоматически<br>пришлет тебе доступ <span class="handwritten">к системе и клубу</span></h2>
+        <h2 id="access-title" class="reveal"><span class="access-line">Сразу после оплаты</span> <span class="access-line">бот в tg автоматически</span> <span class="access-line">пришлет тебе доступ</span> <span class="access-subtitle">к системе и клубу</span></h2>
         <div class="phone reveal" aria-label="Пример сообщения Telegram после оплаты">
           <div class="phone-island" aria-hidden="true"></div>
           <span class="chat-day">Сегодня</span>
@@ -39,6 +46,7 @@
       </div>
     </section>
 
+    <div class="tariff-stack">
     <section class="plan-section light section" id="tc-tariffs" aria-labelledby="light-title">
       <article class="plan-card">
         <header class="reveal"><h2 id="light-title">Легкий старт</h2><div class="price-row"><p class="price">10 900₽</p><span class="handwritten">2 месяца</span></div></header>
@@ -74,6 +82,8 @@
         <a class="gold-button bronze-button reveal" href="#action-unavailable" data-action="personal">Запись на разбор <span class="telegram-medallion" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="m4 14 24-9-5 23-8-7-5 4 1-8 13-9-16 8z"/></svg></span></a>
       </article>
     </section>
+
+    </div>
 
     <section class="video-section section" id="tc-video" aria-label="Видео про клуб">
       <img src="assets/backgrounds/06.webp" alt="Фотографии автора: тренировки, дыхательные практики и жизнь клуба" width="1450" height="1085" loading="lazy" decoding="async">

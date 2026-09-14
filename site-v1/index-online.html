@@ -171,6 +171,61 @@
 #tc-embed .tariff-link:hover span{transform:none}}
 @media(prefers-reduced-motion:reduce){#tc-embed .gold-button.is-pressed,#tc-embed .video-button.is-pressed,#tc-embed .tariff-link.is-pressed,#tc-embed .back-top.is-pressed,#tc-embed .dialog-ok.is-pressed{scale:1;filter:brightness(1.18)}
 #tc-embed .tap-wave{display:none!important}}
+#tc-embed .floating-nav{position:fixed;inset:0 0 auto;z-index:100;background:linear-gradient(110deg,#171613ed,#0c0c11ed);border-bottom:1px solid #d8b06b16;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);padding-top:env(safe-area-inset-top,0px)}
+#tc-embed .floating-nav-inner{width:min(100%,1170px);margin:auto;display:flex;align-items:center;gap:clamp(20px,5vw,70px);padding:18px 7%;min-height:76px}
+#tc-embed .floating-nav a{position:relative;overflow:hidden;font-family:Arial,sans-serif;font-size:clamp(14px,2.5vw,30px);font-weight:400;line-height:1.2;padding:12px 2px;white-space:nowrap;transition:color .2s,scale .2s;touch-action:manipulation}
+#tc-embed .floating-nav .nav-club{margin-left:auto;color:#c5a366}
+#tc-embed .floating-nav a:hover,#tc-embed .floating-nav a[aria-current="location"]{color:#f4cd8a}
+#tc-embed .floating-nav a.is-pressed{scale:.97;color:#ffe1a9}
+#tc-embed .section{scroll-margin-top:100px}
+#tc-embed .hero .handwritten{margin-top:0;translate:0 -5px}
+#tc-embed .hero-nowrap{white-space:nowrap}
+#tc-embed .access{min-height:0;aspect-ratio:1170/1161;background-size:100% auto;background-position:center bottom;background-repeat:no-repeat}
+#tc-embed .access::before{content:'';position:absolute;inset:0 0 52%;z-index:-1;background:linear-gradient(120deg,#070b10f5,#0a0a09ed 65%,#171106da)}
+#tc-embed .access-inner{position:absolute;inset:0;padding:12% 10% 0 13%}
+#tc-embed .access h2{font-size:min(5.25vw,61.5px);line-height:1.1;letter-spacing:-.045em;font-weight:800;word-spacing:normal}
+#tc-embed .access-line,#tc-embed .access-subtitle{display:block;white-space:nowrap}
+#tc-embed .access-subtitle{font-family:Arial,sans-serif;font-size:1.06em;font-weight:400;letter-spacing:-.025em;line-height:1.15;margin-top:.06em}
+#tc-embed .phone{position:absolute;left:12%;top:44%;width:46%;height:67%;min-height:0;margin:0;padding:min(10vw,117px) min(2.1vw,25px) 35px;border-width:min(.65vw,7px);border-radius:min(6vw,70px) min(6vw,70px) 0 0;transform:rotate(3deg);transform-origin:50% 0;font-size:min(2.4vw,28px);line-height:1.25;background:linear-gradient(120deg,#d6d58c,#8db17b)}
+#tc-embed .phone-island{top:4%;height:min(4vw,46px);left:34%;width:32%}
+#tc-embed .chat-day{margin:-3% auto 5%;font-size:.8em}
+#tc-embed .chat-message{padding:3%;border-radius:min(2vw,23px)}
+#tc-embed .chat-message>p+p{margin-top:1.3em}
+#tc-embed .chat-preview{padding:3%;margin-top:.6em;border-left-width:3px;line-height:1.25}
+#tc-embed .phone::after{inset:86% -9px 0}
+#tc-embed .tariff-stack{width:min(100%,1170px);margin-inline:auto;display:grid;grid-auto-rows:1fr}
+#tc-embed .tariff-stack .plan-section{padding:2.5% 12.5%;height:100%;background-size:100% auto;background-repeat:no-repeat;background-position:center center}
+#tc-embed .tariff-stack .personal{background-position:center bottom}
+#tc-embed .tariff-stack .plan-card{height:100%;min-height:min(171vw,2001px);padding:min(7vw,82px) 12% min(6vw,70px);border-radius:min(8vw,94px)}
+#tc-embed .tariff-stack .plan-card>header,#tc-embed .tariff-stack .plan-copy{flex-shrink:0}
+#tc-embed .tariff-stack .plan-card h2{font-size:min(6.5vw,76px);line-height:1.02;letter-spacing:-.055em}
+#tc-embed .tariff-stack .price-row{gap:min(3vw,35px);margin-top:min(1.5vw,18px);flex-wrap:nowrap}
+#tc-embed .tariff-stack .price{font-size:min(7.1vw,83px)}
+#tc-embed .tariff-stack .price-row .handwritten{font-size:min(3.8vw,44px)}
+#tc-embed .tariff-stack .plan-copy{font-size:min(3.45vw,40.4px);line-height:1.22;letter-spacing:-.025em;gap:min(7.5vw,88px);margin:min(8vw,94px) 0 min(7vw,82px)}
+#tc-embed .tariff-stack .light .plan-copy{gap:min(10vw,117px)}
+#tc-embed .tariff-stack .gold-button{min-height:min(15.5vw,181px);font-size:min(4.2vw,49px);padding:min(3vw,35px) min(2vw,24px);margin-top:auto}
+#tc-embed .tariff-stack .personal .plan-card{padding-inline:15%;background:linear-gradient(130deg,#201815b5,#21181560)}
+#tc-embed .tariff-stack .personal h2{font-size:min(4.85vw,57px)}
+#tc-embed .tariff-stack .personal .price{font-size:min(5.4vw,63px)}
+#tc-embed .tariff-stack .personal .price-row{gap:min(3vw,35px);margin-top:min(4vw,47px)}
+#tc-embed .tariff-stack .personal .price-row .handwritten{font-size:min(3.5vw,41px)}
+#tc-embed .tariff-stack .personal .plan-copy{margin-top:min(12vw,140px);gap:min(6vw,70px)}
+#tc-embed .tariff-stack .bronze-button{font-size:min(3.1vw,36px);padding:min(1vw,12px) min(1vw,12px) min(1vw,12px) min(3vw,35px);gap:min(1.5vw,18px)}
+#tc-embed .tariff-stack .telegram-medallion{flex-basis:min(10vw,117px);height:min(10vw,117px)}
+@media(max-width:700px){#tc-embed .floating-nav-inner{min-height:60px;padding:8px 5%;gap:20px}
+#tc-embed .floating-nav a{font-size:clamp(12px,3.6vw,19px);min-height:44px;display:flex;align-items:center}
+#tc-embed .section{scroll-margin-top:76px}
+#tc-embed .hero .handwritten{margin-top:0;translate:0 -3px}
+#tc-embed .hero h1{font-size:clamp(30px,8.5vw,58px)}
+#tc-embed .tariff-stack .plan-card h2{font-size:6.5vw}
+#tc-embed .tariff-stack .plan-copy{font-size:3.55vw}
+#tc-embed .tariff-stack .personal h2{font-size:4.85vw}}
+#tc-embed .access::before{inset:0 0 38%;mask-image:linear-gradient(#000 0%,#000 72%,transparent 100%);-webkit-mask-image:linear-gradient(#000 0%,#000 72%,transparent 100%)}
+#tc-embed .phone{box-shadow:0 0 0 2px #aaa18a,0 0 0 5px #242320,inset 0 0 0 2px #e4dfb855,0 20px 45px #0008;background-image:radial-gradient(ellipse at 20% 30%,#e5de9f77,transparent 70%),linear-gradient(120deg,#d6d58c,#8db17b)}
+#tc-embed .phone::before{content:'';position:absolute;inset:5% auto 8% -2%;width:1%;border-radius:9px;background:linear-gradient(#b3ada1,#302f2b 30%,#99968b 60%,#282825);pointer-events:none}
+#tc-embed .floating-nav a{border-radius:6px}
+@media(prefers-reduced-motion:reduce){#tc-embed .floating-nav a.is-pressed{scale:1}}
 
 
 /* Full-width HTML block within GetPlatinum's centered content container. */
@@ -184,12 +239,19 @@
 </style>
 <div id="tc-embed">
 
+  <nav class="floating-nav" aria-label="Навигация по странице">
+    <div class="floating-nav-inner">
+      <a href="#tc-top" aria-current="location">Главная</a>
+      <a href="#tc-tariffs">Тарифы</a>
+      <a class="nav-club" href="#tc-video">Смотреть про клуб</a>
+    </div>
+  </nav>
   <a class="skip-link" href="#tc-tariffs">Перейти к тарифам</a>
   <main>
     <section class="hero section" id="tc-top" aria-labelledby="hero-title">
       <div class="hero-art" aria-hidden="true"></div>
       <div class="hero-heading">
-        <h1 id="hero-title">СИСТЕМА 3-Х ШАГОВ</h1>
+        <h1 id="hero-title">СИСТЕМА <span class="hero-nowrap">3-Х ШАГОВ</span></h1>
         <p class="handwritten">и клуб трансформаций</p>
       </div>
       <a class="tariff-link" href="#tc-tariffs">Тарифы <span aria-hidden="true">↓</span></a>
@@ -197,7 +259,7 @@
 
     <section class="access section" id="tc-access" aria-labelledby="access-title">
       <div class="access-inner">
-        <h2 id="access-title" class="reveal">Сразу после оплаты<br>бот в tg автоматически<br>пришлет тебе доступ <span class="handwritten">к системе и клубу</span></h2>
+        <h2 id="access-title" class="reveal"><span class="access-line">Сразу после оплаты</span> <span class="access-line">бот в tg автоматически</span> <span class="access-line">пришлет тебе доступ</span> <span class="access-subtitle">к системе и клубу</span></h2>
         <div class="phone reveal" aria-label="Пример сообщения Telegram после оплаты">
           <div class="phone-island" aria-hidden="true"></div>
           <span class="chat-day">Сегодня</span>
@@ -210,6 +272,7 @@
       </div>
     </section>
 
+    <div class="tariff-stack">
     <section class="plan-section light section" id="tc-tariffs" aria-labelledby="light-title">
       <article class="plan-card">
         <header class="reveal"><h2 id="light-title">Легкий старт</h2><div class="price-row"><p class="price">10 900₽</p><span class="handwritten">2 месяца</span></div></header>
@@ -246,6 +309,8 @@
       </article>
     </section>
 
+    </div>
+
     <section class="video-section section" id="tc-video" aria-label="Видео про клуб">
       <img src="https://raw.githubusercontent.com/neka4141-ui/transformation-club-assets/0dd0e4ebf806670fe65187011c4ae860f1f1fc1f/site-v1/assets/backgrounds/06.webp" alt="Фотографии автора: тренировки, дыхательные практики и жизнь клуба" width="1450" height="1085" loading="lazy" decoding="async">
       <a class="video-button reveal" href="#action-unavailable" data-action="video"><span class="play-icon" aria-hidden="true">▶</span><span>СМОТРЕТЬ ПРО КЛУБ</span><strong>ЗА 2 МИНУТЫ</strong></a>
@@ -267,7 +332,39 @@
   if (!root || root.dataset.initialized) return;
   root.dataset.initialized = 'true';
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const controls = root.querySelectorAll('.gold-button, .video-button, .tariff-link, .back-top, .dialog-ok');
+  const controls = root.querySelectorAll('.gold-button, .video-button, .tariff-link, .back-top, .dialog-ok, .floating-nav a');
+  const navigation = root.querySelector('.floating-nav');
+  if (navigation && 'IntersectionObserver' in window) {
+    const navTargets = [root.querySelector('#tc-top'), root.querySelector('.tariff-stack'), root.querySelector('#tc-video')];
+    const anchors = ['#tc-top', '#tc-tariffs', '#tc-video'];
+    const navObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const href = anchors[navTargets.indexOf(entry.target)];
+        navigation.querySelectorAll('a').forEach(link => {
+          if (link.getAttribute('href') === href) link.setAttribute('aria-current', 'location');
+          else link.removeAttribute('aria-current');
+        });
+      });
+    }, { rootMargin: '-20% 0px -65% 0px', threshold: 0 });
+    navTargets.filter(Boolean).forEach(target => navObserver.observe(target));
+  }
+  root.querySelectorAll('a[href^="#tc-"]').forEach(link => {
+    link.addEventListener('click', event => {
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || event.button !== 0) return;
+      const target = root.querySelector(link.getAttribute('href'));
+      if (!target) return;
+      event.preventDefault();
+      const offset = navigation ? navigation.getBoundingClientRect().height + 12 : 20;
+      window.scrollTo({ top: Math.max(0, target.getBoundingClientRect().top + window.scrollY - offset), behavior: motion.matches ? 'instant' : 'smooth' });
+      target.setAttribute('tabindex', '-1');
+      target.focus({ preventScroll: true });
+      if (navigation) navigation.querySelectorAll('a').forEach(item => {
+        if (item.getAttribute('href') === link.getAttribute('href')) item.setAttribute('aria-current', 'location');
+        else item.removeAttribute('aria-current');
+      });
+    });
+  });
   let activePress = null;
   const releasePress = (cancelled = false) => {
     if (!activePress) return;
