@@ -1,5 +1,52 @@
 (() => {
   'use strict';
+  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const controls = document.querySelectorAll('.gold-button, .video-button, .tariff-link, .back-top, .dialog-ok');
+  let activePress = null;
+  const releasePress = (cancelled = false) => {
+    if (!activePress) return;
+    activePress.control.classList.remove('is-pressed');
+    if (cancelled && activePress.waveAnimation) activePress.waveAnimation.cancel();
+    activePress = null;
+  };
+  controls.forEach(control => {
+    const wave = document.createElement('span');
+    wave.className = 'tap-wave';
+    wave.setAttribute('aria-hidden', 'true');
+    control.appendChild(wave);
+    let waveAnimation;
+    control.addEventListener('pointerdown', event => {
+      if (!event.isPrimary || event.button !== 0) return;
+      releasePress(true);
+      if (waveAnimation) waveAnimation.cancel();
+      const rect = control.getBoundingClientRect();
+      const diameter = Math.hypot(rect.width, rect.height) * 2;
+      wave.style.width = wave.style.height = `${diameter}px`;
+      wave.style.left = `${event.clientX - rect.left}px`;
+      wave.style.top = `${event.clientY - rect.top}px`;
+      control.classList.add('is-pressed');
+      if (!motion.matches && typeof wave.animate === 'function') {
+        waveAnimation = wave.animate([
+          { transform: 'translate(-50%, -50%) scale(0)', opacity: .48 },
+          { transform: 'translate(-50%, -50%) scale(.65)', opacity: .2, offset: .55 },
+          { transform: 'translate(-50%, -50%) scale(1)', opacity: 0 }
+        ], { duration: 520, easing: 'cubic-bezier(.22,1,.36,1)' });
+      }
+      activePress = { control, waveAnimation, id: event.pointerId, x: event.clientX, y: event.clientY };
+    });
+    control.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || (event.key === ' ' && control.tagName === 'BUTTON')) control.classList.add('is-pressed');
+    });
+    control.addEventListener('keyup', () => control.classList.remove('is-pressed'));
+    control.addEventListener('blur', () => control.classList.remove('is-pressed'));
+    motion.addEventListener('change', event => { if (event.matches && waveAnimation) waveAnimation.cancel(); });
+  });
+  window.addEventListener('pointerup', () => releasePress(), { passive: true });
+  window.addEventListener('pointercancel', () => releasePress(true), { passive: true });
+  window.addEventListener('blur', () => releasePress(true));
+  window.addEventListener('pointermove', event => {
+    if (activePress && event.pointerId === activePress.id && Math.hypot(event.clientX - activePress.x, event.clientY - activePress.y) > 12) releasePress(true);
+  }, { passive: true });
   const dialog = document.querySelector('#action-dialog');
   const links = window.CLUB_LINKS || {};
   document.querySelectorAll('[data-action]').forEach(link => {
@@ -26,7 +73,6 @@
     if (event.target === dialog && (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom)) dialog.close();
   });
 
-  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   if (motion.matches || !('IntersectionObserver' in window)) return;
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {

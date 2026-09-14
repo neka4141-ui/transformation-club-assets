@@ -19,3 +19,12 @@ h1,h2{font-family:inherit}
 .hero-heading::before{content:'';position:absolute;inset:-35% -5% -45%;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at center,rgba(9,8,7,.74) 0%,rgba(9,8,7,.46) 43%,rgba(9,8,7,0) 73%)}
 .hero .handwritten{font-family:TCNeucha,cursive;font-weight:400;font-style:normal;font-size:clamp(32px,5.4vw,64px);line-height:1.15;letter-spacing:.005em;color:#f6c889;text-shadow:0 2px 3px #090807,0 0 14px #090807b3;-webkit-text-stroke:.25px currentColor;margin-top:8px}
 @media(max-width:700px){.hero .handwritten{font-size:clamp(26px,7.3vw,43px);margin-top:12px;letter-spacing:0}.hero-heading::before{inset:-25% -5% -40%}}
+
+/* Pointer feedback is independent of reveal transforms and never delays navigation. */
+.video-button,.dialog-ok{position:relative}
+.gold-button,.video-button,.tariff-link,.back-top,.dialog-ok{overflow:hidden;touch-action:manipulation;transition:scale .22s var(--ease),filter .22s ease,box-shadow .3s ease,transform .45s var(--ease),opacity .85s var(--ease)}
+.tap-wave{position:absolute;display:block;padding:0!important;margin:0!important;border:0!important;border-radius:50%!important;pointer-events:none;background:radial-gradient(circle,#fff4cfaa 0%,#fff4cf44 45%,transparent 70%)!important;opacity:0;z-index:3}
+.gold-button.is-pressed,.video-button.is-pressed,.tariff-link.is-pressed,.back-top.is-pressed,.dialog-ok.is-pressed{scale:.97;filter:brightness(1.13)}
+.video-button .tap-wave{background:radial-gradient(circle,#ffdd9570,transparent 70%)!important}
+@media(hover:none){.gold-button:hover{transform:none;filter:none}.gold-button.is-pressed{filter:brightness(1.13)}.video-button:hover .play-icon{transform:none;background:#16120bc4}.tariff-link:hover span{transform:none}}
+@media(prefers-reduced-motion:reduce){.gold-button.is-pressed,.video-button.is-pressed,.tariff-link.is-pressed,.back-top.is-pressed,.dialog-ok.is-pressed{scale:1;filter:brightness(1.18)}.tap-wave{display:none!important}}
