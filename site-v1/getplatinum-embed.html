@@ -1,0 +1,293 @@
+<!-- Замените старый HTML-блок целиком этим кодом. -->
+<style>
+@font-face{font-family:TCMontserrat;src:url('https://raw.githubusercontent.com/neka4141-ui/transformation-club-assets/c92e880263131e360b2a54b54df253c59f042d8d/site-v1/assets/fonts/montserrat.ttf') format('truetype');font-weight:100 900;font-display:swap}
+@font-face{font-family:TCCaveat;src:url('https://raw.githubusercontent.com/neka4141-ui/transformation-club-assets/c92e880263131e360b2a54b54df253c59f042d8d/site-v1/assets/fonts/caveat.ttf') format('truetype');font-weight:400 700;font-display:swap}
+#tc-embed{color-scheme:dark;--ink:#090807;--white:#f7f5ed;--gold:#edc461;--ease:cubic-bezier(.22,1,.36,1)}
+#tc-embed *{box-sizing:border-box}
+#tc-embed{scroll-behavior:smooth;scroll-padding-top:20px;background:var(--ink)}
+#tc-embed{margin:0;color:var(--white);background:var(--ink);font-family:TCMontserrat,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+#tc-embed a{color:inherit;text-decoration:none}
+#tc-embed button{font:inherit}
+#tc-embed a,#tc-embed button{-webkit-tap-highlight-color:transparent}
+#tc-embed a:focus-visible,#tc-embed button:focus-visible{outline:3px solid #ffe29c;outline-offset:7px}
+#tc-embed ::selection{background:#bb873e;color:white}
+#tc-embed h1,#tc-embed h2,#tc-embed p{margin:0}
+#tc-embed h1,#tc-embed h2{font-weight:900;letter-spacing:-.055em;line-height:1.02}
+#tc-embed .section{position:relative;isolation:isolate;width:min(100%,1170px);margin-inline:auto;overflow:hidden;background-color:var(--ink)}
+#tc-embed .handwritten{font-family:TCCaveat,cursive;font-weight:700;letter-spacing:-.025em;line-height:1.05}
+#tc-embed .skip-link{position:fixed;top:12px;left:12px;z-index:20;transform:translateY(-160%);padding:14px 20px;background:var(--gold);color:#161009;border-radius:12px}
+#tc-embed .skip-link:focus{transform:none}
+#tc-embed .hero{height:min(132.48vw,1550px);min-height:620px;display:flex;align-items:center;justify-content:center}
+#tc-embed .hero-art{position:absolute;inset:0;z-index:-1;background:url('https://raw.githubusercontent.com/neka4141-ui/transformation-club-assets/c92e880263131e360b2a54b54df253c59f042d8d/site-v1/assets/backgrounds/01.webp') center/cover no-repeat;animation:tc-hero-art-in 1.8s var(--ease) both}
+#tc-embed .hero-heading{width:100%;text-align:center;transform:translateY(-12%);padding:0 3.5%}
+#tc-embed .hero h1{font-size:clamp(32px,7.5vw,88px);white-space:nowrap;animation:tc-hero-copy-in 1.1s .12s var(--ease) both}
+#tc-embed .hero .handwritten{font-size:clamp(30px,5.8vw,68px);color:#e8b67b;animation:tc-hero-copy-in 1.1s .25s var(--ease) both}
+#tc-embed .tariff-link{position:absolute;bottom:3.5%;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:15px;padding:18px 28px;font-size:clamp(17px,2.6vw,30px);font-weight:800;border-radius:30px;transition:background .3s}
+#tc-embed .tariff-link:hover{background:#ffffff0b}
+#tc-embed .tariff-link span{font-size:.9em;transition:transform .35s var(--ease)}
+#tc-embed .tariff-link:hover span{transform:translateY(4px)}
+#tc-embed .access{background:url('https://raw.githubusercontent.com/neka4141-ui/transformation-club-assets/c92e880263131e360b2a54b54df253c59f042d8d/site-v1/assets/backgrounds/02.webp') center bottom/cover no-repeat;min-height:1000px}
+#tc-embed .access-inner{padding:24% 12.5% 0}
+#tc-embed .access h2{font-size:clamp(28px,5.4vw,63px);line-height:1.02}
+#tc-embed .access h2 .handwritten{display:block;font-size:1.08em}
+#tc-embed .phone{position:relative;width:57%;margin-top:95px;min-height:480px;padding:82px 22px 50px;border:7px solid #45423c;border-bottom:0;border-radius:65px 65px 0 0;background:linear-gradient(130deg,#d3cd81,#779660);box-shadow:0 0 0 2px #79736c,0 15px 70px #0008;color:#171717;font:600 clamp(14px,2.3vw,26px)/1.24 Arial,sans-serif}
+#tc-embed .phone::after{content:'';position:absolute;inset:70% -9px 0;background:linear-gradient(transparent,var(--ink));pointer-events:none}
+#tc-embed .phone-island{position:absolute;top:16px;left:34%;width:32%;height:34px;border-radius:25px;background:#080808}
+#tc-embed .chat-day{display:table;margin:-10px auto 20px;background:#0002;border-radius:20px;color:white;font-size:.75em;padding:3px 10px}
+#tc-embed .chat-message{background:#fafafa;border-radius:20px;padding:14px;box-shadow:0 1px 6px #0002}
+#tc-embed .chat-message>p+p{margin-top:25px}
+#tc-embed .sample-link{color:#315b7b;overflow-wrap:anywhere}
+#tc-embed .masked-link{background:#e4c94c;border-radius:10px;color:transparent}
+#tc-embed .chat-preview{border-left:4px solid #b48662;padding:8px;margin-top:10px;background:#d8c8b9;border-radius:4px;font-size:.82em}
+#tc-embed .chat-preview span{display:block;color:#895631}
+#tc-embed .chat-preview p{font-weight:400}
+#tc-embed .plan-section{padding:25px 12.5%;background-position:center;background-size:cover}
+#tc-embed .light{background-image:url('https://raw.githubusercontent.com/neka4141-ui/transformation-club-assets/c92e880263131e360b2a54b54df253c59f042d8d/site-v1/assets/backgrounds/03.webp')}
+#tc-embed .master{background-image:url('https://raw.githubusercontent.com/neka4141-ui/transformation-club-assets/c92e880263131e360b2a54b54df253c59f042d8d/site-v1/assets/backgrounds/04.webp')}
+#tc-embed .personal{background-image:url('https://raw.githubusercontent.com/neka4141-ui/transformation-club-assets/c92e880263131e360b2a54b54df253c59f042d8d/site-v1/assets/backgrounds/05.webp')}
+#tc-embed .plan-card{display:flex;flex-direction:column;min-height:1480px;border:1px solid #91704a25;border-radius:75px;padding:75px 12% 55px;background:linear-gradient(140deg,#181312cc,#110e0d95);box-shadow:inset 0 0 0 1px #ffffff03}
+#tc-embed .plan-card h2{font-size:clamp(34px,6.7vw,78px)}
+#tc-embed .price-row{display:flex;align-items:center;justify-content:space-between;gap:25px;margin-top:10px}
+#tc-embed .price{color:var(--gold);font-size:clamp(38px,7.1vw,83px);font-weight:900;line-height:1.1;letter-spacing:-.06em;white-space:nowrap}
+#tc-embed .price-row .handwritten{font-size:clamp(25px,3.8vw,44px);color:var(--gold);white-space:nowrap}
+#tc-embed .plan-copy{display:flex;flex-direction:column;gap:80px;margin-top:80px;margin-bottom:80px;font-size:clamp(19px,3.4vw,40px);line-height:1.18;font-weight:800;letter-spacing:-.035em}
+#tc-embed .gold-button{position:relative;display:flex;align-items:center;justify-content:center;flex-shrink:0;min-height:140px;padding:24px 25px;margin-top:auto;border:1px solid #d7ac58;border-radius:100px;background:linear-gradient(105deg,#b97828 0%,#d6a341 28%,#e1bf5a 42%,#d6a342 61%,#b47028 100%);box-shadow:inset 0 2px 2px #fff4,inset 0 -3px 9px #75421633,0 8px 35px #0003;color:#fff9ec;font-size:clamp(23px,3.9vw,46px);font-weight:900;letter-spacing:-.04em;text-align:center;transition:transform .45s var(--ease),box-shadow .45s var(--ease),filter .45s}
+#tc-embed .gold-button:hover{transform:translateY(-3px);filter:brightness(1.09);box-shadow:inset 0 2px 2px #fff5,0 12px 40px #c78f322b}
+#tc-embed .gold-button:active{transform:scale(.985)}
+#tc-embed .master .plan-card{background:linear-gradient(145deg,#1e1715ba,#21181492)}
+#tc-embed .master .plan-copy{gap:65px}
+#tc-embed .personal .plan-card{padding-inline:15%;background:linear-gradient(130deg,#201815b5,#21181560)}
+#tc-embed .personal h2{font-size:clamp(30px,4.95vw,58px)}
+#tc-embed .personal .price{font-size:clamp(35px,5.35vw,63px)}
+#tc-embed .personal .price-row{gap:30px;margin-top:40px}
+#tc-embed .personal .price-row .handwritten{font-size:clamp(24px,3.7vw,43px);color:var(--white);white-space:normal}
+#tc-embed .personal .plan-copy{gap:60px;margin-top:110px}
+#tc-embed .bronze-button{gap:20px;justify-content:space-between;font-size:clamp(20px,3vw,35px);padding:12px 12px 12px 35px;background:linear-gradient(125deg,#6a4b24,#b88a48 35%,#6b4e2a 70%,#443018);border:2px solid #a1804b;box-shadow:inset 0 2px 4px #ffe4a940,0 8px 25px #0004}
+#tc-embed .telegram-medallion{display:grid;place-items:center;flex:0 0 100px;height:100px;border-radius:50%;border:4px double #3b2b16;background:linear-gradient(130deg,#c99c59,#755025);box-shadow:0 0 0 3px #c99b5c70,inset 0 0 0 4px #cfa56355,0 4px 5px #0006}
+#tc-embed .telegram-medallion svg{width:56%;fill:#ba8b49;stroke:#513715;stroke-width:1.3;filter:drop-shadow(1px 3px 2px #2a170e)}
+#tc-embed .video-section{aspect-ratio:1170/876;display:grid;place-items:center}
+#tc-embed .video-section>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+#tc-embed .video-section::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(transparent 25%,#a7681540 70%,#09080733)}
+#tc-embed .video-button{display:flex;align-items:center;flex-direction:column;margin-top:15%;font-size:clamp(21px,4.9vw,57px);line-height:1.05;letter-spacing:-.045em;font-weight:900;text-align:center}
+#tc-embed .video-button>span:not(.play-icon),#tc-embed .video-button strong{padding:5px 18px;background:#030303;border-radius:9px}
+#tc-embed .video-button strong{color:#f4cc67}
+#tc-embed .play-icon{display:grid;place-items:center;width:64px;height:64px;margin-bottom:16px;padding-left:4px;border-radius:50%;border:1px solid #ffe2a373;background:#16120bc4;font-size:25px;backdrop-filter:blur(12px);transition:transform .4s var(--ease),background .4s}
+#tc-embed .video-button:hover .play-icon{transform:scale(1.08);background:#996b2a}
+#tc-embed .footer{min-height:760px;padding:220px 7% 110px;background:url('https://raw.githubusercontent.com/neka4141-ui/transformation-club-assets/c92e880263131e360b2a54b54df253c59f042d8d/site-v1/assets/backgrounds/07.webp') center/cover no-repeat;display:flex;flex-direction:column;justify-content:space-between;gap:160px}
+#tc-embed .legal{font-size:clamp(18px,2.85vw,33px);font-weight:800;letter-spacing:-.03em;line-height:1.22}
+#tc-embed .legal p+p{margin-top:30px;font-size:.88em}
+#tc-embed .copyright{font-size:clamp(12px,1.6vw,19px);font-weight:800;line-height:1.15}
+#tc-embed .back-top{position:absolute;bottom:75px;right:7%;display:grid;place-items:center;width:46px;height:46px;border:1px solid #ffffff26;border-radius:50%;transition:background .3s}
+#tc-embed .back-top:hover{background:#ffffff12}
+#tc-embed .unavailable{display:none}
+#tc-embed .unavailable:target{display:block;padding:32px;max-width:700px;margin:30px auto;line-height:1.6}
+#tc-embed .unavailable a{text-decoration:underline;color:var(--gold)}
+#tc-embed dialog{width:min(90%,470px);padding:46px 34px 30px;border:1px solid #8b683c66;border-radius:26px;background:#181512;color:var(--white);box-shadow:0 30px 100px #0009}
+#tc-embed dialog::backdrop{background:#0009;backdrop-filter:blur(8px)}
+#tc-embed dialog h2{font-size:29px;letter-spacing:-.035em;line-height:1.1}
+#tc-embed dialog p{margin-top:18px;line-height:1.5;color:#c9c1b7}
+#tc-embed .dialog-close{position:absolute;right:12px;top:8px;width:40px;height:40px;border:0;background:transparent;color:inherit;font-size:30px;cursor:pointer}
+#tc-embed .dialog-ok{margin-top:28px;width:100%;padding:14px;border:0;border-radius:30px;background:var(--gold);color:#211509;font-weight:800;cursor:pointer}
+#tc-embed .reveal.is-pending{opacity:0;transform:translateY(24px)}
+#tc-embed .reveal{transition:opacity .85s var(--ease),transform 1s var(--ease)}
+#tc-embed .reveal.is-visible{opacity:1;transform:none}
+@keyframes tc-hero-art-in{from{opacity:.5;transform:scale(1.025)}to{opacity:1;transform:scale(1)}}
+@keyframes tc-hero-copy-in{from{opacity:0;translate:0 18px}to{opacity:1;translate:0 0}}
+@media(min-width:1200px){#tc-embed .hero{height:min(1050px,110svh);min-height:780px}
+#tc-embed .hero-art{background-position:center 42%}
+#tc-embed .hero-heading{transform:translateY(30%)}
+#tc-embed .hero h1{font-size:83px}
+#tc-embed .access{min-height:1050px}
+#tc-embed .plan-section{padding-block:35px}
+#tc-embed .plan-card{min-height:1430px}
+#tc-embed .light .plan-card{min-height:1340px}
+#tc-embed .plan-copy{font-size:35px}
+#tc-embed .master .plan-card,#tc-embed .personal .plan-card{min-height:1730px}}
+@media(max-width:700px){#tc-embed .hero{height:100svh;min-height:560px;max-height:1000px}
+#tc-embed .hero-art{background-size:cover;background-position:60% center}
+#tc-embed .hero-heading{padding:0 4%;transform:translateY(5%)}
+#tc-embed .hero h1{white-space:normal;font-size:clamp(37px,8.5vw,58px);text-wrap:balance;line-height:1.03}
+#tc-embed .hero .handwritten{font-size:clamp(29px,7vw,45px);margin-top:12px}
+#tc-embed .tariff-link{bottom:4%;font-size:18px}
+#tc-embed .access{min-height:0;background-size:auto 100%;background-position:62% bottom}
+#tc-embed .access-inner{padding:90px 7% 0}
+#tc-embed .access h2{font-size:clamp(26px,6.5vw,43px)}
+#tc-embed .access h2 br{display:none}
+#tc-embed .access h2 .handwritten{margin-top:7px}
+#tc-embed .phone{width:66%;min-height:290px;margin-top:55px;border-width:4px;border-radius:35px 35px 0 0;padding:54px 10px 45px;font-size:clamp(13px,3.4vw,21px)}
+#tc-embed .phone-island{height:20px;top:12px}
+#tc-embed .chat-day{margin-bottom:10px}
+#tc-embed .chat-message{padding:10px;border-radius:12px}
+#tc-embed .chat-message>p+p{margin-top:17px}
+#tc-embed .chat-preview{padding:5px}
+#tc-embed .plan-section{padding:20px 5%;background-size:100% 100%}
+#tc-embed .plan-card,#tc-embed .personal .plan-card{padding:36px 7% 30px;border-radius:32px;min-height:0}
+#tc-embed .plan-card h2{font-size:clamp(32px,7.3vw,50px)}
+#tc-embed .price{font-size:clamp(37px,8.4vw,57px)}
+#tc-embed .price-row{gap:12px;flex-wrap:wrap}
+#tc-embed .price-row .handwritten{font-size:29px}
+#tc-embed .plan-copy,#tc-embed .master .plan-copy,#tc-embed .personal .plan-copy{font-size:clamp(19px,4.7vw,28px);line-height:1.3;gap:32px;margin:40px 0 45px;letter-spacing:-.025em}
+#tc-embed .gold-button{min-height:76px;font-size:28px;padding:18px}
+#tc-embed .personal h2{font-size:clamp(26px,6.3vw,42px)}
+#tc-embed .personal .price-row{margin-top:24px;gap:15px}
+#tc-embed .personal .price{font-size:clamp(34px,7.8vw,52px)}
+#tc-embed .personal .price-row .handwritten{font-size:27px}
+#tc-embed .personal .plan-card{background:linear-gradient(125deg,#211815d9,#211815a8)}
+#tc-embed .bronze-button{font-size:clamp(18px,4.3vw,28px);padding:9px 9px 9px 20px;gap:8px}
+#tc-embed .telegram-medallion{flex-basis:57px;height:57px}
+#tc-embed .video-button{font-size:clamp(20px,4.8vw,33px)}
+#tc-embed .video-button>span:not(.play-icon),#tc-embed .video-button strong{padding:5px 10px;border-radius:5px}
+#tc-embed .play-icon{width:45px;height:45px;font-size:18px;margin-bottom:10px}
+#tc-embed .footer{min-height:470px;padding:110px 8% 65px;gap:100px}
+#tc-embed .legal{font-size:20px}
+#tc-embed .copyright{font-size:12px}
+#tc-embed .back-top{bottom:50px}
+#tc-embed .reveal.is-pending{transform:translateY(18px)}}
+@media(prefers-reduced-motion:reduce){#tc-embed{scroll-behavior:auto}
+#tc-embed *,#tc-embed *::before,#tc-embed *::after{animation:none!important;transition:none!important}
+#tc-embed .reveal.is-pending{opacity:1;transform:none}}
+
+
+/* Full-width HTML block within GetPlatinum's centered content container. */
+#tc-embed{position:relative;left:50%;width:100vw;max-width:none!important;margin:0 0 0 -50vw!important;padding:0!important;overflow:hidden;line-height:normal;text-align:left;box-sizing:border-box;background:#090807;color:#f7f5ed}
+#tc-embed main{display:block;margin:0;padding:0;max-width:none}
+#tc-embed h1,#tc-embed h2,#tc-embed p{padding:0;border:0}
+#tc-embed a{text-decoration:none}
+#tc-embed .section{margin-block:0}
+*:has(> #tc-embed),*:has(> * > #tc-embed){padding-block:0!important;margin-block:0!important;background:#090807!important}
+
+</style>
+<div id="tc-embed">
+
+  <a class="skip-link" href="#tc-tariffs">Перейти к тарифам</a>
+  <main>
+    <section class="hero section" id="tc-top" aria-labelledby="hero-title">
+      <div class="hero-art" aria-hidden="true"></div>
+      <div class="hero-heading">
+        <h1 id="hero-title">СИСТЕМА 3-Х ШАГОВ</h1>
+        <p class="handwritten">и клуб трансформаций</p>
+      </div>
+      <a class="tariff-link" href="#tc-tariffs">Тарифы <span aria-hidden="true">↓</span></a>
+    </section>
+
+    <section class="access section" id="tc-access" aria-labelledby="access-title">
+      <div class="access-inner">
+        <h2 id="access-title" class="reveal">Сразу после оплаты<br>бот в tg автоматически<br>пришлет тебе доступ <span class="handwritten">к системе и клубу</span></h2>
+        <div class="phone reveal" aria-label="Пример сообщения Telegram после оплаты">
+          <div class="phone-island" aria-hidden="true"></div>
+          <span class="chat-day">Сегодня</span>
+          <div class="chat-message">
+            <p>Оплата прошла успешно ✅</p>
+            <p>Добро пожаловать!<br>Ваша персональная ссылка доступа — <span class="sample-link">https://t.me/<span class="masked-link" aria-label="персональная ссылка скрыта">••••••••••</span></span></p>
+            <div class="chat-preview"><span>Telegram</span><strong>Не курю! Клуб трансформаций</strong><p>3-х шаговая система:</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="plan-section light section" id="tc-tariffs" aria-labelledby="light-title">
+      <article class="plan-card">
+        <header class="reveal"><h2 id="light-title">Легкий старт</h2><div class="price-row"><p class="price">10 900₽</p><span class="handwritten">2 месяца</span></div></header>
+        <div class="plan-copy">
+          <p class="reveal">Ты выходишь свободным человеком и без абстиненции. С первой недели освобождения ты понимаешь — эта жизнь лучше.</p>
+          <p class="reveal">Получаешь полный доступ к сообществу, материалам и обновлениям.</p>
+          <p class="reveal">Делаешь первые шаги на закрепление нового, сильного опыта, который повлияет на всю твою жизнь.</p>
+        </div>
+        <a class="gold-button reveal" href="#action-unavailable" data-action="light" aria-label="Оплатить тариф Легкий старт — 10 900 рублей">Оплатить</a>
+      </article>
+    </section>
+
+    <section class="plan-section master section" id="tc-master" aria-labelledby="master-title">
+      <article class="plan-card">
+        <header class="reveal"><h2 id="master-title">Мастер<br>трансформаций</h2><div class="price-row"><p class="price">25 900₽</p><span class="handwritten">1 год</span></div></header>
+        <div class="plan-copy">
+          <p class="reveal">Ты не просто свободный человек. Ты на подходе в высшую лигу своей жизни — мастер своего тела, дыхания и состояний. Да, здесь другой уровень усилий. Но и другой уровень счастья. И совершенно новая идентичность. Ты не бывший курильщик. Ты новая версия себя.</p>
+          <p class="reveal">Заключаешь контракт с самим собой и за 1 год меняешь к лучшему сразу несколько сфер жизни только потому, что правильное освобождение дает эту энергию, а клуб и сообщество поддерживает вектор</p>
+          <p class="reveal">Уже спустя 3-6 месяцев ты однозначно скажешь себе: «Я принял одно из лучших решений в своей жизни»</p>
+        </div>
+        <a class="gold-button reveal" href="#action-unavailable" data-action="master" aria-label="Оплатить тариф Мастер трансформаций — 25 900 рублей">Оплатить</a>
+      </article>
+    </section>
+
+    <section class="plan-section personal section" id="tc-personal" aria-labelledby="personal-title">
+      <article class="plan-card">
+        <header class="reveal"><h2 id="personal-title">Индивидуальная<br>личная работа</h2><div class="price-row"><p class="price">150 000₽</p><span class="handwritten">Легендарная<br>перезагрузка</span></div></header>
+        <div class="plan-copy">
+          <p class="reveal">Доступ к клубу навсегда</p>
+          <p class="reveal">Личная пересборка по лекалам системы. Через сессии тет-а-тет Мы разберем все якори и полностью мягко перестроим мозг и психику. На второй месяц мы уже будем заниматься глобальными вещами: простройкой системы новой жизни с иной био-химией, ясной головой и свежей энергией.</p>
+          <p class="reveal">Индивидуальное выстраивание физ. нагрузок, биодобавок, чаев и дыхательных техник под психотип и расположенность. Разборы и фидбэк.</p>
+        </div>
+        <a class="gold-button bronze-button reveal" href="#action-unavailable" data-action="personal">Запись на разбор <span class="telegram-medallion" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="m4 14 24-9-5 23-8-7-5 4 1-8 13-9-16 8z"/></svg></span></a>
+      </article>
+    </section>
+
+    <section class="video-section section" id="tc-video" aria-label="Видео про клуб">
+      <img src="https://raw.githubusercontent.com/neka4141-ui/transformation-club-assets/c92e880263131e360b2a54b54df253c59f042d8d/site-v1/assets/backgrounds/06.webp" alt="Фотографии автора: тренировки, дыхательные практики и жизнь клуба" width="1450" height="1085" loading="lazy" decoding="async">
+      <a class="video-button reveal" href="#action-unavailable" data-action="video"><span class="play-icon" aria-hidden="true">▶</span><span>СМОТРЕТЬ ПРО КЛУБ</span><strong>ЗА 2 МИНУТЫ</strong></a>
+    </section>
+  </main>
+  <footer class="footer section" id="tc-footer">
+    <div class="legal reveal"><p>ИП Мехоношин Константин Андреевич</p><p>ИНН: 593306976068<br>ОГРНИП: 323595800123562</p></div>
+    <p class="copyright">Все права защищены<br>интеллектуальной собственностью</p>
+    <a class="back-top" href="#tc-top" aria-label="Вернуться к началу страницы">↑</a>
+  </footer>
+  <aside class="unavailable" id="action-unavailable" tabindex="-1"><p>Ссылка пока недоступна. Пожалуйста, попробуйте позже.</p><a href="#tc-tariffs">Вернуться к тарифам</a></aside>
+  <dialog id="action-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-message"><button class="dialog-close" type="button" aria-label="Закрыть">×</button><h2 id="dialog-title">Ссылка пока недоступна</h2><p id="dialog-message">Пожалуйста, попробуйте позже.</p><button class="dialog-ok" type="button">Понятно</button></dialog>
+
+</div>
+<script>
+(() => {
+  'use strict';
+  const root = document.getElementById('tc-embed');
+  if (!root || root.dataset.initialized) return;
+  root.dataset.initialized = 'true';
+  const dialog = root.querySelector('#action-dialog');
+  // Вставьте реальные HTTPS-ссылки здесь. Пустые адреса показывают сообщение.
+  const links = { light: '', master: '', personal: '', video: '' };
+  root.querySelectorAll('[data-action]').forEach(link => {
+    const address = links[link.dataset.action];
+    let valid = false;
+    try { valid = Boolean(address) && new URL(address).protocol === 'https:'; } catch (_) {}
+    if (valid) {
+      link.href = address;
+      link.rel = 'noopener';
+    } else {
+      link.addEventListener('click', event => {
+        if (!dialog || typeof dialog.showModal !== 'function') return;
+        event.preventDefault();
+        const video = link.dataset.action === 'video';
+        root.querySelector('#dialog-title').textContent = video ? 'Видео скоро появится' : 'Ссылка пока недоступна';
+        root.querySelector('#dialog-message').textContent = video ? 'Пожалуйста, загляните чуть позже.' : 'Оплата и запись пока недоступны. Пожалуйста, попробуйте позже.';
+        dialog.showModal();
+      });
+    }
+  });
+  dialog.querySelectorAll('button').forEach(button => button.addEventListener('click', () => dialog.close()));
+  dialog.addEventListener('click', event => {
+    const rect = dialog.getBoundingClientRect();
+    if (event.target === dialog && (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom)) dialog.close();
+  });
+
+  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (motion.matches || !('IntersectionObserver' in window)) return;
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.remove('is-pending');
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.06, rootMargin: '0px 0px -25px 0px' });
+  root.querySelectorAll('.reveal').forEach(element => {
+    if (element.getBoundingClientRect().top < window.innerHeight * .95) return;
+    element.classList.add('is-pending');
+    observer.observe(element);
+  });
+  motion.addEventListener('change', event => {
+    if (!event.matches) return;
+    observer.disconnect();
+    root.querySelectorAll('.is-pending').forEach(element => element.classList.remove('is-pending'));
+  });
+})();
+
+</script>
