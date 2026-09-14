@@ -79,3 +79,9 @@ h1,h2{font-family:inherit}
 .phone::before{content:'';position:absolute;inset:5% auto 8% -2%;width:1%;border-radius:9px;background:linear-gradient(#b3ada1,#302f2b 30%,#99968b 60%,#282825);pointer-events:none}
 .floating-nav a{border-radius:6px}
 @media(prefers-reduced-motion:reduce){.floating-nav a.is-pressed{scale:1}}
+
+/* Match the reference title and upright, open-letter duration captions. */
+.tariff-stack .light .plan-card h2{font-size:min(8vw,94px);letter-spacing:-.055em;white-space:nowrap}
+.tariff-stack .light .price-row,.tariff-stack .master .price-row{justify-content:flex-start;gap:min(4vw,47px)}
+.tariff-stack .light .price-row .handwritten,.tariff-stack .master .price-row .handwritten{font-family:TCNeucha,cursive;font-size:min(4.8vw,56px);font-weight:400;font-style:normal;letter-spacing:0;line-height:1.1;-webkit-text-stroke:.35px currentColor}
+.tariff-stack .master .price-row .handwritten{text-transform:uppercase}
